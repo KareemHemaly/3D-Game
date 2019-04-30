@@ -41,11 +41,17 @@ public class PlayerController : MonoBehaviour
         if (translation > 0)
         {
             anim.SetBool("is_walking", true);
+
+        } else if(translation < 0)
+        {
+            anim.SetBool("is_back", true);
+
         }
         else
         {
             anim.SetBool("is_running", false);
             anim.SetBool("is_walking", false);
+            anim.SetBool("is_back", false);
 
             if (Input.GetButtonDown("Jump"))
             {
