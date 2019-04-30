@@ -64,6 +64,7 @@
     <Compile Include="Assets\MouseForCamera.cs" />
     <Compile Include="Assets\Player\PlayerController.cs" />
     <Compile Include="Assets\playerCollision.cs" />
+    <Compile Include="Assets\Spawner.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Dell/Documents/3D-Game-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

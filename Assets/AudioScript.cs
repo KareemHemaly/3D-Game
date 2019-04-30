@@ -19,7 +19,15 @@ public class AudioScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            MusicSource.Stop();
-        }   
+            if (MusicSource.isPlaying == true)
+            {
+                MusicSource.Stop();
+            }
+            else
+            {
+                MusicSource.Play();
+            }
+        }
+        
     }
 }
