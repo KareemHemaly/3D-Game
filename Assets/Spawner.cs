@@ -7,9 +7,9 @@ public class Spawner : MonoBehaviour
     public Transform spawnPos;
     public GameObject spawnee;
     //public GameObject replacment;
-    public GameObject gift;
     public int numberOfBoxes;
     public Transform forGift;
+    public GameObject gift;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +31,9 @@ public class Spawner : MonoBehaviour
     void change_positions()
     {
         float x = Random.Range(300f, 900f);
-        float y = 398.6f;
         float z = Random.Range(265f, 800f);
+
+        float y = 398.6f;
         Vector3 pos = new Vector3(x, y, z);
         spawnPos.position = pos;
 
