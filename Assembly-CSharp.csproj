@@ -61,8 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AudioScript.cs" />
+    <Compile Include="Assets\Eventuser.cs" />
+    <Compile Include="Assets\LowPolyNature\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\LowPolyNature\Scripts\PlayerFollow.cs" />
     <Compile Include="Assets\MouseForCamera.cs" />
-    <Compile Include="Assets\Player\PlayerController.cs" />
+    <Compile Include="Assets\Player\playerController.cs" />
     <Compile Include="Assets\Player\PlayerController2.cs" />
     <Compile Include="Assets\playerCollision.cs" />
     <Compile Include="Assets\Spawner.cs" />
