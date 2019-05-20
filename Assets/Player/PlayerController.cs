@@ -58,6 +58,11 @@ public class playerController : MonoBehaviour
                 anim.SetTrigger("is_jump");
             }
         }
+        if (Input.GetKey("m"))
+        {
+            Application.LoadLevel("menu");
+        }
+
 
     } // End of update function
 }

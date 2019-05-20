@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -7,13 +8,14 @@ public class Spawner : MonoBehaviour
     public Transform spawnPos;
     public GameObject spawnee;
     //public GameObject replacment;
-    public int numberOfBoxes;
+    public static int numberOfBoxes = 3;
     public Transform forGift;
     public GameObject gift;
     private GameObject player;
     private List<GameObject> boxes;
     private List<GameObject> gifts;
     public static int gold = 0;
+    public static int level=1;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,13 @@ public class Spawner : MonoBehaviour
         if (boxes.Count > 0)
         {
             destroy_closest();
+        }
+        if (Input.GetKey("n") && gold == numberOfBoxes)
+        {
+            numberOfBoxes += 3;
+            gold = 0;
+            level++;
+            Application.LoadLevel("Level1");
         }
     }
 
@@ -86,7 +95,11 @@ public class Spawner : MonoBehaviour
     {
         GUIStyle style = new GUIStyle();
         style.richText = true;
-        GUILayout.Label("<size=25>your gold score: <color=yellow>"+gold+"</color></size>", style);
+        GUILayout.Label("<size=25>level:"+level+",your gold score: <color=yellow>" + gold + "</color></size>", style);
+        if (gold == numberOfBoxes)
+        {
+            GUILayout.Box("<size=100><color=white>       YOU WIN \n    level completed  \n press (N) to next level</color></size>", style);
+        }
     }
 
 }
